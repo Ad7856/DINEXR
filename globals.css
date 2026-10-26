@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { color-scheme: dark; }
+body { @apply bg-board text-chalk font-sans antialiased; }
+:focus-visible { @apply outline outline-2 outline-offset-2 outline-bloom; }
+
+@layer components {
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full bg-bloom px-5 py-3 font-semibold text-board transition hover:bg-bloom-deep disabled:opacity-50; }
+  .btn-ghost { @apply inline-flex items-center justify-center rounded-full border border-board-line px-5 py-3 text-chalk transition hover:border-bloom; }
+  .card { @apply rounded-card border border-board-line bg-board-soft shadow-card; }
+  .input { @apply w-full rounded-xl border border-board-line bg-board px-4 py-3 text-chalk placeholder:text-chalk-dim; }
+}
